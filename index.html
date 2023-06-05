@@ -11,7 +11,14 @@
             let userWinCounter = 0;
             let computerWinCounter = 0;
             let gameCounter = 0;
+
+            let computerChoice;
           
+                if (randomNumber <= 33) {computerChoice = 'rock'}
+                else if (randomNumber > 33 && randomNumber < 66) {computerChoice = 'paper'}
+                else {computerChoice = 'scissors'};
+            
+            console.log(computerChoice);
         </script>
     </body>
 </html>
