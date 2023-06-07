@@ -21,9 +21,49 @@
         }
             console.log(getComputerChoice());
 
-            let playerChoice = prompt('Pick ROCK, PAPER, OR SCISSORS');
-            playerChoice = playerChoice.toLowerCase();
-            console.log(playerChoice);
+
+
+            function playRound (playerSelection, computerSelection) {
+                
+                switch (true) {
+                    case (playerSelection === 'rock' && computerSelection === 'rock'):
+                        return "DRAW";
+                        break;
+                    case (playerSelection === 'rock' && computerSelection === 'paper'):
+                        return "Computer WINS";
+                        break;
+                    case (playerSelection === 'rock' && computerSelection === 'scissors'):
+                        return "You WIN";
+                        break;
+                    case (playerSelection  === 'paper' && computerSelection === 'paper'):
+                        return "DRAW";
+                        break;
+                    case (playerSelection === 'paper' && computerSelection === 'scissors'):
+                        return "Computer WINS";
+                        break;
+                    case (playerSelection === 'paper' && computerSelection === 'rock'):
+                        return "You WIN";
+                        break;
+                    case (playerSelection === 'scissors' && computerSelection === 'scissors') :
+                        return "DRAW";
+                        break;    
+                    case (playerSelection === 'scissors' && computerSelection === 'paper'):
+                        return "You WIN";
+                        break;
+                    case (playerSelection === 'scissors' && computerSelection === 'rock'): 
+                        return "Computer WINS";
+                        break;           
+                }
+            }
+                let playerSelection = prompt('Pick ROCK, PAPER, OR SCISSORS');
+                playerSelection = playerSelection.toLowerCase();
+
+                const computerSelection = getComputerChoice();
+
+                console.log (playRound(playerSelection, computerSelection));
+
+
+
         </script>
     </body>
 </html>
