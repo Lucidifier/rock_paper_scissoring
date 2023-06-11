@@ -18,8 +18,9 @@
                 }
                 
                    if (playerWinCounter > computerWinCounter) {
-                    alert ('CONGRATULATIONS! YOU WIN!!!');
-                   } else {alert ('COMPUTER WINS! :(') } 
+                    alert (`CONGRATULATIONS! YOU WIN!!! \n The final score is ${playerWinCounter} : ${computerWinCounter}`);
+                } else if (playerWinCounter < computerWinCounter) {alert (`COMPUTER WINS! :(\n The final score is ${playerWinCounter} : ${computerWinCounter}`) 
+                } else { alert(`THE GAME RESULTED IN  A DRAW! \n The final score is ${playerWinCounter} : ${computerWinCounter}` ) } 
                 }
 
 
