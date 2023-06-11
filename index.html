@@ -14,21 +14,18 @@
                 let computerWinCounter = 0;
                 
                 while (gameCounter < 5) {
-                  
-                    let playerChoice = prompt('Pick ROCK, PAPER, OR SCISSORS');
-                    if (playerChoice != null) {playerChoice = playerChoice.toLowerCase();}
-                    else {alert(':\'(')};
-
                     const computerChoice = getComputerChoice();
-              
+                    console.log(computerChoice);
+
+                    let playerChoice = prompt('Pick ROCK, PAPER, OR SCISSORS');
+                    playerChoice = playerChoice.toLowerCase();
+                              
+                    playRound(playerChoice, computerChoice);
+
                     console.log(gameCounter) ;
                     console.log(computerWinCounter);
                     console.log(playerWinCounter);
-
-                                       
-                    playRound(playerChoice, computerChoice);
                 }  
-
 
                 function getComputerChoice() {
                     let randomNumber = Math.floor(Math.random() * 100);
@@ -37,11 +34,9 @@
                     else if (randomNumber > 33 && randomNumber < 66) {computerRandomChoice = 'paper'}
                     else {computerRandomChoice = 'scissors'};
                     return computerRandomChoice;
-                    }  
-                    console.log(getComputerChoice())
+                    } 
 
                 function playRound (playerSelection, computerSelection) {
-                    console.log(computerSelection)
                     if (playerSelection === 'rock' && computerSelection === 'rock') {
                             ++ gameCounter;
                             ++computerWinCounter ;
@@ -83,7 +78,6 @@
                             alert ('Computer chose ROCK. Computer WINS!');
                     } else {alert ("PLEASE ENTER ONE OF THE OPTIONS"); 
                     }                                                                          
-                
                 }
                                       
                 if (playerWinCounter > computerWinCounter) {
