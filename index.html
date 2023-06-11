@@ -17,7 +17,9 @@
                     playRound();
                 }
                 
-                    alert ('the  game is over');
+                   if (playerWinCounter > computerWinCounter) {
+                    alert ('CONGRATULATIONS! YOU WIN!!!');
+                   } else {alert ('COMPUTER WINS! :(') } 
                 }
 
 
@@ -25,7 +27,7 @@
             let randomNumber = Math.floor(Math.random() * 100);
             
 
-            console.log(gameCounter) ;
+                console.log(gameCounter) ;
                 console.log(computerWinCounter);
                 console.log(playerWinCounter);
             
@@ -48,49 +50,49 @@
                         ++ gameCounter;
                         ++computerWinCounter ;
                         ++playerWinCounter;
-                        return "DRAW";
+                        alert ('Computer chose ROCK. I\'ts a DRAW!');
                         break;
                     case (playerSelection === 'rock' && computerSelection === 'paper'):
                         ++ gameCounter;
                         ++computerWinCounter;
-                        return "Computer WINS";
+                        alert ('Computer chose PAPER. Computer WINS!');
                         break;
                     case (playerSelection === 'rock' && computerSelection === 'scissors'):
                         ++ gameCounter;
                         ++playerWinCounter;
-                        return "You WIN";
+                        alert ('Computer chose SCISSORS. You WIN!');
                         break;
                     case (playerSelection  === 'paper' && computerSelection === 'paper'):
                         ++ gameCounter;
                         ++computerWinCounter;
                         ++playerWinCounter;
-                        return "DRAW";
+                        alert ('Computer chose PAPER. I\'ts a DRAW!');
                         break;
                     case (playerSelection === 'paper' && computerSelection === 'scissors'):
                     ++ gameCounter;
                     ++computerWinCounter;
-                        return "Computer WINS";
+                        alert ('Computer chose SCISSORS. Computer WINS!');
                         break;
                     case (playerSelection === 'paper' && computerSelection === 'rock'):
                     ++ gameCounter;
                     ++playerWinCounter;
-                        return "You WIN";
+                        alert ('Computer chose ROCK. You WIN!');
                         break;
                     case (playerSelection === 'scissors' && computerSelection === 'scissors') :
                     ++ gameCounter;
                     ++playerWinCounter;
                     ++computerWinCounter;
-                        return "DRAW";
+                        alert ('Computer chose SCISSORS. I\'ts a DRAW!');
                         break;    
                     case (playerSelection === 'scissors' && computerSelection === 'paper'):
                     ++ gameCounter;
                     ++playerWinCounter;
-                        return "You WIN";
+                        alert ('Computer chose PAPER. You WIN!');
                         break;
                     case (playerSelection === 'scissors' && computerSelection === 'rock'):
                     ++ gameCounter; 
                     ++computerWinCounter;
-                        return "Computer WINS";
+                    alert ('Computer chose ROCK. Computer WINS!');
                         break;      
                     default:
                         alert ("PLEASE ENTER ONE OF THE OPTIONS NEXT TIME") ;  
