@@ -8,7 +8,7 @@
     <body>
         <script>
             let randomNumber = Math.floor(Math.random() * 100);
-            let userWinCounter = 0;
+            let playerWinCounter = 0;
             let computerWinCounter = 0;
             let gameCounter = 0;
 
@@ -27,33 +27,57 @@
                 
                 switch (true) {
                     case (playerSelection === 'rock' && computerSelection === 'rock'):
+                        ++ gameCounter;
+                        ++computerWinCounter ;
+                        ++playerWinCounter;
                         return "DRAW";
                         break;
                     case (playerSelection === 'rock' && computerSelection === 'paper'):
+                        ++ gameCounter;
+                        ++computerWinCounter;
                         return "Computer WINS";
                         break;
                     case (playerSelection === 'rock' && computerSelection === 'scissors'):
+                        ++ gameCounter;
+                        ++playerWinCounter;
                         return "You WIN";
                         break;
                     case (playerSelection  === 'paper' && computerSelection === 'paper'):
+                        ++ gameCounter;
+                        ++computerWinCounter;
+                        ++playerWinCounter;
                         return "DRAW";
                         break;
                     case (playerSelection === 'paper' && computerSelection === 'scissors'):
+                    ++ gameCounter;
+                    ++computerWinCounter;
                         return "Computer WINS";
                         break;
                     case (playerSelection === 'paper' && computerSelection === 'rock'):
+                    ++ gameCounter;
+                    ++playerWinCounter;
                         return "You WIN";
                         break;
                     case (playerSelection === 'scissors' && computerSelection === 'scissors') :
+                    ++ gameCounter;
+                    ++playerWinCounter;
+                    ++computerWinCounter;
                         return "DRAW";
                         break;    
                     case (playerSelection === 'scissors' && computerSelection === 'paper'):
+                    ++ gameCounter;
+                    ++playerWinCounter;
                         return "You WIN";
                         break;
-                    case (playerSelection === 'scissors' && computerSelection === 'rock'): 
+                    case (playerSelection === 'scissors' && computerSelection === 'rock'):
+                    ++ gameCounter; 
+                    ++computerWinCounter;
                         return "Computer WINS";
-                        break;           
+                        break;      
+                    default:
+                        alert ("PLEASE ENTER ONE OF THE OPTIONS NEXT TIME") ;   
                 }
+                
             }
                 let playerSelection = prompt('Pick ROCK, PAPER, OR SCISSORS');
                 playerSelection = playerSelection.toLowerCase();
@@ -61,6 +85,10 @@
                 const computerSelection = getComputerChoice();
 
                 console.log (playRound(playerSelection, computerSelection));
+                console.log( gameCounter) ;
+                console.log(computerWinCounter);
+                console.log(playerWinCounter);
+               
 
 
 
