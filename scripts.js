@@ -1,20 +1,11 @@
 function game() { 
-  let playerWinCounter = 0;
-  let computerWinCounter = 0;
+  let playerWinCounter = 5;
+  let computerWinCounter = 5;
   
-//     while (gameCounter < 5) {
-      // const computerChoice = getComputerChoice();
-      // console.log(computerChoice);
-
-
       //CLICK PLAYER CHOICE SELECTION//
       const playerChoiceRock = document.querySelector('.ps-rock');
       const playerChoicePaper = document.querySelector('.ps-paper');
       const playerChoiceScissors = document.querySelector('.ps-scissors');
-
-      //DISPLAY RESULT//
-      const displayResult= document.querySelector('.result');
-      displayResult.textContent = `${playerWinCounter} : ${computerWinCounter}`;
 
       playerChoiceRock.addEventListener('click', ()=> {
         playRound('rock', getComputerChoice());
@@ -34,18 +25,20 @@ function game() {
         playRound('scissors', getComputerChoice());
         console.log(playerWinCounter);
         console.log(computerWinCounter);
-        displayResult.textContent = `${playerWinCounter} : ${computerWinCounter}`;
+        
         });
 
-    
-      
+      //DISPLAY RESULT//
+      const displayResult= document.querySelector('.result');
+      displayResult.textContent = `${playerWinCounter} : ${computerWinCounter}`;
 
+      //DISPLAY LIVES//
+      const displayPlayerLife = document.querySelector('.player-life');
+      displayPlayerLife.textContent = `${playerWinCounter}`;
+      const displayComputerLife = document.querySelector('.computer-life');
+      displayComputerLife.textContent = `${computerWinCounter}`;
 
-      // let playerChoice = prompt('Pick ROCK, PAPER, OR SCISSORS');
-      // playerChoice = playerChoice.toLowerCase();
-                
-      // playRound(playerChoice, computerChoice);
-
+      //GET COMPUTER CHOICE//
       function getComputerChoice() {
         let randomNumber = Math.floor(Math.random() * 100);
         let computerRandomChoice;
@@ -55,6 +48,7 @@ function game() {
         return computerRandomChoice;
         } 
     
+    //COMPARE CHOICES//    
     function playRound (playerSelection, computerSelection) {
         // if (playerSelection === 'rock' && computerSelection === 'rock') {
         //         // ++ gameCounter;
@@ -62,36 +56,36 @@ function game() {
         //         // ++playerWinCounter;
         //         alert ('Computer chose ROCK. I\'ts a DRAW!');
         if (playerSelection === computerSelection) {
-                alert (`Computer chose ${computerSelection.toUpperCase()}. I\'ts a DRAW!`);
+          displayResult.textContent = `Computer chose ${computerSelection.toUpperCase()}. I\'ts a DRAW!`;
         } else if (playerSelection === 'rock' && computerSelection === 'paper') {                     
-                ++computerWinCounter;
-                alert ('Computer chose PAPER. Computer WINS!');
+                --computerWinCounter;
+                displayResult.textContent = 'Computer chose PAPER. Computer WINS!';
         } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-                ++playerWinCounter;
-                alert ('Computer chose SCISSORS. You WIN!');
+                --playerWinCounter;
+                displayResult.textContent = 'Computer chose SCISSORS. You WIN!';
         // } else if (playerSelection  === 'paper' && computerSelection === 'paper') {
         //         //  ++ gameCounter;
         //         // ++computerWinCounter;
         //         // ++playerWinCounter;
         //         alert ('Computer chose PAPER. I\'ts a DRAW!');
         } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-                ++computerWinCounter;
-                alert ('Computer chose SCISSORS. Computer WINS!');
+                --computerWinCounter;
+                displayResult.textContent = 'Computer chose SCISSORS. Computer WINS!';
         } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-                ++playerWinCounter;
-                alert ('Computer chose ROCK. You WIN!');
+                --playerWinCounter;
+                displayResult.textContent = 'Computer chose ROCK. You WIN!';
         // } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
         //         //  ++ gameCounter;
         //         // ++playerWinCounter;
         //         // ++computerWinCounter;
         //         alert ('Computer chose SCISSORS. I\'ts a DRAW!');
         } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-                ++playerWinCounter;
-                alert ('Computer chose PAPER. You WIN!');
+                --playerWinCounter;
+                displayResult.textContent = 'Computer chose PAPER. You WIN!';
         } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-                ++computerWinCounter;
-                alert ('Computer chose ROCK. Computer WINS!');
-        } else {alert ("PLEASE ENTER ONE OF THE OPTIONS"); 
+                --computerWinCounter;
+                displayResult.textContent = 'Computer chose ROCK. Computer WINS!';
+        } else {alert ('error'); 
         }                                                                          
     }
   }  
