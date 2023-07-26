@@ -6,36 +6,45 @@ function game() {
       // const computerChoice = getComputerChoice();
       // console.log(computerChoice);
 
+
+      //CLICK PLAYER CHOICE SELECTION//
       const playerChoiceRock = document.querySelector('.ps-rock');
       const playerChoicePaper = document.querySelector('.ps-paper');
       const playerChoiceScissors = document.querySelector('.ps-scissors');
 
+      //DISPLAY RESULT//
+      const displayResult= document.querySelector('.result');
+      displayResult.textContent = `${playerWinCounter} : ${computerWinCounter}`;
+
       playerChoiceRock.addEventListener('click', ()=> {
         playRound('rock', getComputerChoice());
-        console.log(computerWinCounter);
         console.log(playerWinCounter);
+        console.log(computerWinCounter);
+        displayResult.textContent = `${playerWinCounter} : ${computerWinCounter}`;
         });
 
       playerChoicePaper.addEventListener('click', ()=> {
         playRound('paper', getComputerChoice());
-        console.log(computerWinCounter);
         console.log(playerWinCounter);
+        console.log(computerWinCounter);
+        displayResult.textContent = `${playerWinCounter} : ${computerWinCounter}`;
         });
       
       playerChoiceScissors.addEventListener('click', ()=> {
         playRound('scissors', getComputerChoice());
-        console.log(computerWinCounter);
         console.log(playerWinCounter);
+        console.log(computerWinCounter);
+        displayResult.textContent = `${playerWinCounter} : ${computerWinCounter}`;
         });
+
+    
+      
 
 
       // let playerChoice = prompt('Pick ROCK, PAPER, OR SCISSORS');
       // playerChoice = playerChoice.toLowerCase();
                 
       // playRound(playerChoice, computerChoice);
-
-      console.log(computerWinCounter);
-      console.log(playerWinCounter);
 
       function getComputerChoice() {
         let randomNumber = Math.floor(Math.random() * 100);

@@ -7,8 +7,12 @@ body {
 }
 
 .player-selection {
-    width: 200px;
-    height: 200px;
     border: 2px solid red;
     flex: 1;
+}
+
+.result {
+    border: 2px solid  red;
+    width: 300px;
+    height: 200px;
 }
