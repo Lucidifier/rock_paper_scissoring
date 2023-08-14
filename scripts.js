@@ -10,14 +10,18 @@ function game() {
    
          //DISPLAY LIVES//
          const displayPlayerLife = document.querySelector('.player-life');
-         displayPlayerLife.textContent = `${playerWinCounter}`;
+         displayPlayerLife.textContent = `Player HP : ${playerWinCounter}`;
          const displayComputerLife = document.querySelector('.computer-life');
-         displayComputerLife.textContent = `${computerWinCounter}`;
+         displayComputerLife.textContent = `Computer HP : ${computerWinCounter}`;
   
       //CLICK PLAYER CHOICE SELECTION//
       const playerChoiceRock = document.querySelector('.ps-rock');
       const playerChoicePaper = document.querySelector('.ps-paper');
       const playerChoiceScissors = document.querySelector('.ps-scissors');
+
+      //VS BLOCK
+      const versusBlock = document.querySelector('.versus');
+      versusBlock.textContent = 'VS';
 
       // if ((playerWinCounter = 0) || (computerWinCounter = 0)) {
       //   if (playerWinCounter > computerWinCounter) {

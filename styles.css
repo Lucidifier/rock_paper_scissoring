@@ -1,9 +1,81 @@
 body {
     margin: 0;
+    background-color: yellow;
+    background-image: url('images/bgIMG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-.container {
+.container-computer {
     display: flex;
+    position: fixed;
+    left: 800px;
+    top: 150px;
+   
+}
+.computer-life {
+    border: 2px solid  red;
+    width: 200px;
+    height: 100px;
+}
+
+.computer-image {
+    width: 200px;
+    height: 100px;
+    background-image: url(images/computerIMG.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.versus {
+    width: 200px;
+    height: 100px;
+    border: 2px solid  red;
+    position: fixed;
+    left: 800px;
+    top: 300px;
+}
+
+.container-player {
+    display: flex;
+    position: fixed;
+    left: 600px;
+    top: 450px;
+
+}
+
+.player-image {
+    width: 200px;
+    height: 100px;
+    background-image: url(images/playerIMG.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.player-life  {
+    border: 2px solid  red;
+    width: 200px;
+    height: 100px;
+}
+
+.result {
+    border: 2px solid  red;
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    left: 750px;
+    top: 600px;
+}
+
+.container-selection {
+    display: flex;
+    width: 600px;
+    height: 100px;
+    position: fixed;
+    left: 600px;
+    top: 700px;
 }
 
 .player-selection {
@@ -11,20 +83,6 @@ body {
     flex: 1;
 }
 
-.result {
-    border: 2px solid  red;
-    width: 300px;
-    height: 200px;
-}
 
-.player-life  {
-    border: 2px solid  red;
-    width: 300px;
-    height: 200px;
-}
 
-.computer-life {
-    border: 2px solid  red;
-    width: 300px;
-    height: 200px;
-}
+
