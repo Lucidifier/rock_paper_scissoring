@@ -7,21 +7,63 @@ function game() {
          //DISPLAY RESULT//
          const displayResult= document.querySelector('.result');
          displayResult.textContent = 'A wild COMPUTER appears! Choose your move and try to defeat it!';
+         displayResult.style.fontFamily = '"Courier New", monospace';
+         displayResult.style.fontSize  = '30px';
+         displayResult.style.color = 'white';
+         displayResult.style.textAlign = 'center';
+        //  displayResult.style.lineHeight = '75px';
    
          //DISPLAY LIVES//
          const displayPlayerLife = document.querySelector('.player-life');
          displayPlayerLife.textContent = `Player HP : ${playerWinCounter}`;
+         displayPlayerLife.style.fontFamily = '"Courier New", monospace';
+         displayPlayerLife.style.fontSize  = '22px';
+         displayPlayerLife.style.color = 'white';
+         displayPlayerLife.style.textAlign = 'center';
+         displayPlayerLife.style.lineHeight = '75px';
+
          const displayComputerLife = document.querySelector('.computer-life');
          displayComputerLife.textContent = `Computer HP : ${computerWinCounter}`;
+         displayComputerLife.style.fontFamily = '"Courier New", monospace';
+         displayComputerLife.style.fontSize  = '22px';
+         displayComputerLife.style.color = 'white';
+         displayComputerLife.style.textAlign = 'center';
+         displayComputerLife.style.lineHeight = '75px';
   
       //CLICK PLAYER CHOICE SELECTION//
       const playerChoiceRock = document.querySelector('.ps-rock');
+      playerChoiceRock.textContent = 'ROCK';
+      playerChoiceRock.style.fontFamily = '"Brush Script MT", cursive';
+      playerChoiceRock.style.fontSize  = '25px';
+      playerChoiceRock.style.color = 'white';
+      playerChoiceRock.style.textAlign = 'center';
+      playerChoiceRock.style.lineHeight = '55px';
+
       const playerChoicePaper = document.querySelector('.ps-paper');
+      playerChoicePaper.textContent = 'PAPER';
+      playerChoicePaper.style.fontFamily = '"Brush Script MT", cursive';
+      playerChoicePaper.style.fontSize  = '25px';
+      playerChoicePaper.style.color = 'white';
+      playerChoicePaper.style.textAlign = 'center';
+      playerChoicePaper.style.lineHeight = '55px';
+
       const playerChoiceScissors = document.querySelector('.ps-scissors');
+      playerChoiceScissors.textContent = 'SCISSORS';
+      playerChoiceScissors.style.fontFamily = '"Brush Script MT", cursive';
+      playerChoiceScissors.style.fontSize  = '25px';
+      playerChoiceScissors.style.color = 'white';
+      playerChoiceScissors.style.textAlign = 'center';
+      playerChoiceScissors.style.lineHeight = '55px';
+
 
       //VS BLOCK
       const versusBlock = document.querySelector('.versus');
       versusBlock.textContent = 'VS';
+      versusBlock.style.fontFamily = '"Courier New", monospace';
+      versusBlock.style.fontSize  = '120px';
+      versusBlock.style.color = '#cc6600';
+      versusBlock.style.textAlign = 'center';
+      // versusBlock.style.lineHeight = '100px';
 
       // if ((playerWinCounter = 0) || (computerWinCounter = 0)) {
       //   if (playerWinCounter > computerWinCounter) {

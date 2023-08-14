@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: yellow;
+    background-color: #CC6600;
     background-image: url('images/bgIMG.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,12 +10,11 @@ body {
 .container-computer {
     display: flex;
     position: fixed;
-    left: 800px;
+    left: 740px;
     top: 150px;
    
 }
 .computer-life {
-    border: 2px solid  red;
     width: 200px;
     height: 100px;
 }
@@ -32,17 +31,16 @@ body {
 .versus {
     width: 200px;
     height: 100px;
-    border: 2px solid  red;
     position: fixed;
     left: 800px;
-    top: 300px;
+    top: 260px;
 }
 
 .container-player {
     display: flex;
     position: fixed;
-    left: 600px;
-    top: 450px;
+    left: 700px;
+    top: 400px;
 
 }
 
@@ -55,32 +53,37 @@ body {
     background-repeat: no-repeat;
 }
 .player-life  {
-    border: 2px solid  red;
     width: 200px;
     height: 100px;
 }
 
 .result {
-    border: 2px solid  red;
-    width: 300px;
+    width: 500px;
     height: 100px;
     position: fixed;
-    left: 750px;
-    top: 600px;
+    left: 650px;
+    top: 550px;
+    border: 3px solid #ff8000;
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .container-selection {
     display: flex;
-    width: 600px;
-    height: 100px;
+    gap: 20px;
+    width: 500px;
+    height: 60px;
     position: fixed;
-    left: 600px;
+    left: 670px;
     top: 700px;
 }
 
 .player-selection {
-    border: 2px solid red;
     flex: 1;
+    background-color: #ff8000;
+    border-radius: 15px;
+    
+    
 }
 
 
