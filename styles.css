@@ -63,7 +63,7 @@ body {
     position: fixed;
     left: 650px;
     top: 550px;
-    border: 3px solid #ff8000;
+    border: 7px solid #ff8000;
     border-radius: 10px;
     padding: 15px;
 }
@@ -71,19 +71,25 @@ body {
 .container-selection {
     display: flex;
     gap: 20px;
-    width: 500px;
+    width: 550px;
     height: 60px;
     position: fixed;
-    left: 670px;
-    top: 700px;
+    left: 650px;
+    top: 715px;
 }
 
 .player-selection {
     flex: 1;
     background-color: #ff8000;
+    transition: background-color 0.3s;
+    font-size: 25px;
+    transition: font-size 0.1s;
     border-radius: 15px;
-    
-    
+}
+
+.player-selection:hover {
+    background-color: #cc6600;
+    font-size: 30px;
 }
 
 
