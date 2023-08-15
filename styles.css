@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: #CC6600;
-  background-image: url(images/bgIMG.png);
+  background-image: url(../images/bgIMG.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
