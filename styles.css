@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: #CC6600;
-  background-image: url('./images/bgIMG.png');
+  background-image: url('../images/bgIMG.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -22,7 +22,7 @@ body {
 .computer-image {
   width: 200px;
   height: 100px;
-  background-image: url('./images/computerIMG.png');
+  background-image: url('../images/computerIMG.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,7 +47,7 @@ body {
 .player-image {
   width: 200px;
   height: 100px;
-  background-image: url('./images/playerIMG.png');
+  background-image: url('../images/playerIMG.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
