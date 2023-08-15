@@ -74,24 +74,35 @@ function game() {
       versusBlock.style.textAlign = 'center';
       versusBlock.style.cursor = 'default';
       versusBlock.style.userSelect = 'none';
-      // versusBlock.style.lineHeight = '100px';
 
-      // if ((playerWinCounter = 0) || (computerWinCounter = 0)) {
-      //   if (playerWinCounter > computerWinCounter) {
-      //     displayResult.textContent = 'Game is over. You win!'
-      //   } else {
-      //     displayResult.textContent  = 'Game is over. Computer wins!'
-      //   }
-      // }
-      
-      // function playRounds() {
+      const playerChoiceContainer = document.querySelector ('.container-selection');
+
+      const playAgain = document.querySelector('.play-again-button');
+      playAgain.addEventListener('click', resetGame);
+
+      function resetGame() {
+        playerWinCounter =5;
+        computerWinCounter = 5;
+        displayResult.textContent = 'A wild COMPUTER appears! Choose your move!';
+        displayPlayerLife.textContent = `Player HP : ${playerWinCounter}`;
+        displayComputerLife.textContent = `Computer HP : ${computerWinCounter}`;
+        playerChoiceContainer.classList.remove('container-selection--disabled');
+        playAgain.style.display = 'none';
+        console.log('bruh');
+      }
+
 
       function checkEndResult() {
          if ((playerWinCounter  <= 0) || (computerWinCounter <= 0)) {
           if (playerWinCounter > computerWinCounter) {
           displayResult.textContent =  'You have defeated COMPUTER!';
+          playerChoiceContainer.classList.add('container-selection--disabled');
+          playAgain.style.display = 'block';
+
         } else {
           displayResult.textContent =  'You have been defeated :('
+          playerChoiceContainer.classList.add('container-selection--disabled');
+          playAgain.style.display = 'block';
         }
       }
       }
