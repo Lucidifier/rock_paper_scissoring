@@ -1,81 +1,82 @@
 body {
-    margin: 0;
-    background-color: #CC6600;
-    background-image: url('images/bgIMG.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  margin: 0;
+  background-color: #CC6600;
+  background-image: url('images/bgIMG.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .container-computer {
-    display: flex;
-    position: fixed;
-    left: 740px;
-    top: 150px;
-   
+  display: flex;
+  position: fixed;
+  left: 740px;
+  top: 150px; 
 }
+
 .computer-life {
-    width: 200px;
-    height: 100px;
+  width: 200px;
+  height: 100px;
 }
 
 .computer-image {
-    width: 200px;
-    height: 100px;
-    background-image: url(images/computerIMG.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+  background-image: url(images/computerIMG.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .versus {
-    width: 200px;
-    height: 100px;
-    position: fixed;
-    left: 800px;
-    top: 260px;
+  width: 200px;
+  height: 100px;
+  position: fixed;
+  left: 800px;
+  top: 260px;
 }
 
 .container-player {
-    display: flex;
-    position: fixed;
-    left: 700px;
-    top: 400px;
+  display: flex;
+  position: fixed;
+  left: 700px;
+  top: 400px;
 
 }
 
 .player-image {
-    width: 200px;
-    height: 100px;
-    background-image: url(images/playerIMG.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+  background-image: url(images/playerIMG.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 .player-life  {
-    width: 200px;
-    height: 100px;
+  width: 200px;
+  height: 100px;
 }
 
 .result {
-    width: 500px;
-    height: 100px;
-    position: fixed;
-    left: 650px;
-    top: 550px;
-    border: 7px solid #ff8000;
-    border-radius: 10px;
-    padding: 15px;
+  width: 500px;
+  height: 100px;
+  position: fixed;
+  left: 650px;
+  top: 550px;
+  border: 7px solid #ff8000;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .container-selection {
-    display: flex;
-    gap: 20px;
-    width: 550px;
-    height: 60px;
-    position: fixed;
-    left: 650px;
-    top: 715px;
+  display: flex;
+  gap: 20px;
+  width: 550px;
+  height: 60px;
+  position: fixed;
+  left: 650px;
+  top: 715px;
 }
 
 .container-selection--disabled {
@@ -83,20 +84,20 @@ body {
 }
 
 .player-selection {
-    flex: 1;
-    background-color: #ff8000;
-    transition: background-color 0.1s;
-    font-size: 25px;
-    transition: font-size 0.1s;
-    border-radius: 15px;
-    font-weight:  normal;
-    transition: font-weight 0.2s;
+  flex: 1;
+  background-color: #ff8000;
+  transition: background-color 0.1s;
+  font-size: 25px;
+  transition: font-size 0.1s;
+  border-radius: 15px;
+  font-weight:  normal;
+  transition: font-weight 0.2s;
 }
 
 .player-selection:hover {
-    background-color: #cc6600;
-    font-size: 30px;
-    font-weight: bold;
+  background-color: #cc6600;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .play-again-button {
@@ -124,7 +125,3 @@ body {
   background-color: #CC6600;
   font-size: 45px;
 }
-
-
-
-
