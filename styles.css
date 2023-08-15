@@ -81,15 +81,18 @@ body {
 .player-selection {
     flex: 1;
     background-color: #ff8000;
-    transition: background-color 0.3s;
+    transition: background-color 0.1s;
     font-size: 25px;
     transition: font-size 0.1s;
     border-radius: 15px;
+    font-weight:  normal;
+    transition: font-weight 0.2s;
 }
 
 .player-selection:hover {
     background-color: #cc6600;
     font-size: 30px;
+    font-weight: bold;
 }
 
 
